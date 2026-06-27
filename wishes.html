@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Birthday Wishes</title>
+<style>
+  body {background: linear-gradient(45deg, #667eea, #764ba2); color: #fff; font-family: 'Poppins'; padding: 40px; text-align: center;}
+  .wish-card {
+    background: rgba(255,255,255,0.1);
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 500px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .wish-card:hover {background: rgba(255,255,255,0.2); transform: translateY(-5px);}
+  .wish-card img {width: 80px; height: 80px; border-radius: 50%; border: 3px solid #fff;}
+  a {color: #feca57; text-decoration: none; font-size: 1.2rem;}
+</style>
+</head>
+<body>
+<h1>Special Wishes for You 🎉</h1>
+<p>Click on each card to reveal a message</p>
+
+<div class="wish-card" onclick="alert('Wishing you health, wealth, and endless happiness! 🎂')">
+  <img src="https://i.pravatar.cc/100?img=1" alt="Friend1">
+  <h3>From: Best Friend</h3>
+  <p>Click me!</p>
+</div>
+
+<div class="wish-card" onclick="alert('May all your dreams come true this year! ✨')">
+  <img src="https://i.pravatar.cc/100?img=5" alt="Friend2">
+  <h3>From: Family</h3>
+  <p>Click me!</p>
+</div>
+
+<div class="wish-card" onclick="alert('You deserve all the cake and love today! 💖')">
+  <img src="https://i.pravatar.cc/100?img=8" alt="Friend3">
+  <h3>From: Colleague</h3>
+  <p>Click me!</p>
+</div>
+
+<br>
+<a href="index.html">← Back to Home</a>
+</body>
+</html>

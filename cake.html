@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Cut The Cake</title>
+<style>
+  body {background: #ffeaa7; text-align: center; font-family: Arial; padding: 40px;}
+  h1 {color: #d63031;}
+  #cake {
+    width: 300px;
+    height: 250px;
+    margin: 40px auto;
+    background: linear-gradient(to bottom, #ff7675 0%, #ff7675 20%, #fff 20%, #fff 40%, #ff7675 40%, #ff7675 60%, #fff 60%, #fff 80%, #ff7675 80%);
+    border-radius: 20px 20px 10px 10px;
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    transition: 0.5s;
+  }
+  #cake.cut {
+    transform: scale(0.8) rotate(10deg);
+    filter: brightness(1.2);
+  }
+  .candle {
+    width: 10px;
+    height: 40px;
+    background: #74b9ff;
+    position: absolute;
+    top: -40px;
+    left: 145px;
+  }
+  .flame {
+    width: 15px;
+    height: 20px;
+    background: #fdcb6e;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    position: absolute;
+    top: -55px;
+    left: 142px;
+    animation: flicker 0.5s infinite alternate;
+  }
+  @keyframes flicker {from{transform:scale(1);} to{transform:scale(1.2);}}
+  a {color: #6c5ce7; text-decoration: none; font-size: 1.2rem;}
+</style>
+</head>
+<body>
+<h1>Make a Wish & Cut The Cake! 🍰</h1>
+<p>Click on the cake to cut it</p>
+
+<div id="cake" onclick="cutCake()">
+  <div class="candle"></div>
+  <div class="flame"></div>
+</div>
+
+<p id="msg"></p>
+
+<script>
+function cutCake(){
+  document.getElementById('cake').classList.add('cut');
+  document.getElementById('msg').innerHTML = "🎉 Happy Birthday! Wish granted! 🎉";
+  // Play sound effect
+  let audio = new Audio('https://www.soundjay.com/misc/sounds/bell-ringing-05.mp3');
+  audio.play();
+}
+</script>
+
+<br><br>
+<a href="index.html">← Back to Home</a>
+</body>
+</html>
